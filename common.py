@@ -17,10 +17,10 @@ class FileParser:
     
 
 class PartContext:
-    def __init__(self, part_name:str, file_name:str, run_part:bool = True):
+    def __init__(self, part_name:str, file_name:str):
         self.part_name = part_name
         self.data = FileParser().get_data_as_string(file_name)
-        self.run_part = run_part
+        self.start_time, self.end_time = None, None
 
 
     def __enter__(self):
@@ -29,7 +29,8 @@ class PartContext:
         return self
     
     def __exit__(self, exc_type, exc_value, exc_traceback):
-        print(f'Part {self.part_name} took {time.time() - self.start_time :.2f} seconds')
+        self.end_time = time.time()
+        print(f'Part {self.part_name} took {self.end_time - self.start_time:.5f} seconds')
         if exc_type:
             print(f'Part {self.part_name} failed with error: {exc_value}')
         return True

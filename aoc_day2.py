@@ -27,7 +27,7 @@ def part1():
                         break
             if vaild_game:
                 total_sum += i
-        print(f'total_sum: {total_sum}')
+        print(f'Answer: {total_sum}')
 
 
 def part2():
@@ -51,10 +51,10 @@ def part2():
                         min_cubes[color] = x
             total_sum += np.prod([x for x in min_cubes.values()]) # add product of min cubes
             min_cubes.update(reset_min_cubes) # reset min cubes
-        print(f'total_sum: {total_sum}')
+        print(f'Answer: {total_sum}')
 
 
 
 if __name__ == '__main__':
-    # part1()
+    part1()
     part2()

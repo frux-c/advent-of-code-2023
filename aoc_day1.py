@@ -19,7 +19,7 @@ MIXED_NUM_MAPPING = {
     **NUM_MAPPING, **WORD_NUM_MAPPING
 }
 def part_1():
-    with PartContext('1', 'day1.txt', run_part=False) as part1:
+    with PartContext('1', 'day1.txt') as part1:
         # part 1
         total = 0
         lines = part1.data.split('\n')
@@ -35,10 +35,8 @@ def part_1():
                     break
                 i += 1
                 j -= 1
-            cnum = 0
-            cnum = (num_lft * 10) + num_rgt
-            total += cnum
-        print(f'total: {total}')
+            total += (num_lft * 10) + num_rgt
+        print(f'Answer: {total}')
 
 def part_2():
     with PartContext('2', 'day1.txt') as part2:
@@ -65,7 +63,7 @@ def part_2():
             cnum = 0
             cnum = (num_lft * 10) + num_rgt
             total += cnum
-        print(f'total: {total}')
+        print(f'Answer: {total}')
 
 
 if __name__ == '__main__':
