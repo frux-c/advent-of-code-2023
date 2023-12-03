@@ -19,3 +19,12 @@ Starting part 2
 Answer: 70265
 Part 2 took 0.00285 seconds
 ```
+#### Day 3
+```bash
+Starting part 1
+Answer: 532331
+Part 1 took 0.02336 seconds
+Starting part 2
+Answer: 82301120
+Part 2 took 0.01318 seconds
+```
