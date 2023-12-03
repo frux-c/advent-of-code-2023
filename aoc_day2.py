@@ -29,9 +29,32 @@ def part1():
                 total_sum += i
         print(f'total_sum: {total_sum}')
 
-                
+
+def part2():
+    # Min cube requred for game
+    min_cubes = {
+        'red': 0,
+        'green': 0,
+        'blue': 0
+    }
+    reset_min_cubes = min_cubes.copy()
+    with PartContext('2', 'day2.txt') as part2:
+        total_sum = 0 # sum of game ids
+        lines = part2.data.split('\n')
+        for i, line in enumerate(lines, 1):
+            game_id, games = line.split(':')
+            rounds = games.split(';')
+            for _round in rounds:
+                for cube in _round.split(','):
+                    num, color = cube.strip().split(' ')
+                    if (x := int(num)) > min_cubes[color]:
+                        min_cubes[color] = x
+            total_sum += np.prod([x for x in min_cubes.values()]) # add product of min cubes
+            min_cubes.update(reset_min_cubes) # reset min cubes
+        print(f'total_sum: {total_sum}')
 
 
 
 if __name__ == '__main__':
-    part1()
+    # part1()
+    part2()
