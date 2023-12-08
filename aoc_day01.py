@@ -21,7 +21,7 @@ MIXED_NUM_MAPPING = {
 def part_1():
     with PartContext('1', 'day1.txt') as part1:
         # part 1
-        total = 0
+        part1.answer = 0
         lines = part1.data.split('\n')
         for line in lines:
             i, j = 0, len(line) - 1
@@ -35,12 +35,11 @@ def part_1():
                     break
                 i += 1
                 j -= 1
-            total += (num_lft * 10) + num_rgt
-        print(f'Answer: {total}')
+            part1.answer += (num_lft * 10) + num_rgt
 
 def part_2():
     with PartContext('2', 'day1.txt') as part2:
-        total = 0
+        part2.answer = 0
         lines = part2.data.split('\n')
         for line in lines:
             i, j = 0, len(line)
@@ -59,12 +58,9 @@ def part_2():
                         break
                 i += 1
                 j -= 1
-            # print(f'num_lft: {num_lft}, num_rgt: {num_rgt}, line: {line}')
             cnum = 0
             cnum = (num_lft * 10) + num_rgt
-            total += cnum
-        print(f'Answer: {total}')
-
+            part2.answer += cnum
 
 if __name__ == '__main__':
     part_1()

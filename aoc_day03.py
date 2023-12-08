@@ -42,11 +42,10 @@ def part1_helper(arr: np.ndarray, r: int, c: int, nums=None):
                 arr[x][ts:te] = -1 # mark as visited
             nums.append(num)
                 
-
 def part1():
     with PartContext('1', 'day03.txt') as part1:
         lines = part1.data.split('\n')
-        total_sum = 0
+        part1.answer = 0
         arr = np.zeros((len(lines), len(lines[0])), dtype=np.int8)
         symbol_location: list[tuple[int, int]] = []
         for r, line in enumerate(lines):
@@ -61,10 +60,7 @@ def part1():
         nums = []
         for r, c in symbol_location:
             part1_helper(arr, r, c, nums)
-        total_sum = sum(nums)
-
-        print(f'Answer: {total_sum}')
-
+        part1.answer = sum(nums)
 
 def part2_helper(arr: np.ndarray, r: int, c: int, nums=None):
     if nums is None:
@@ -108,7 +104,7 @@ def part2_helper(arr: np.ndarray, r: int, c: int, nums=None):
 def part2():
     with PartContext('2', 'day03.txt') as part2:
         lines = part2.data.split('\n')
-        total_sum = 0
+        part2.answer = 0
         arr = np.zeros((len(lines), len(lines[0])), dtype=np.int8)
         gear_location: list[tuple[int, int]] = []
         for r, line in enumerate(lines):
@@ -124,10 +120,8 @@ def part2():
         for r, c in gear_location:
             part1_helper(arr, r, c, nums)
             if len(nums) == 2:
-                total_sum += np.prod(nums)
+                part2.answer += np.prod(nums)
             nums.clear()
-
-        print(f'Answer: {total_sum}')
 
 if __name__ == '__main__':
     part1()

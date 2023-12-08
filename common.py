@@ -21,6 +21,7 @@ class PartContext:
         self.part_name = part_name
         self.data = FileParser().get_data_as_string(file_name)
         self.start_time, self.end_time = None, None
+        self.answer = None
 
 
     def __enter__(self):
@@ -30,6 +31,7 @@ class PartContext:
     
     def __exit__(self, exc_type, exc_value, exc_traceback):
         self.end_time = time.time()
+        print(f'Answer : {self.answer}')
         print(f'Part {self.part_name} took {self.end_time - self.start_time:.5f} seconds')
         if exc_type:
             print(f'Part {self.part_name} failed with error: {exc_value}')
