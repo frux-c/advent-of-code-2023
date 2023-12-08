@@ -28,3 +28,12 @@ Starting part 2
 Answer: 82301120
 Part 2 took 0.01318 seconds
 ```
+### Day 4
+```bash
+Starting part 1
+Answer : 23235
+Part 1 took 0.00387 seconds
+Starting part 2
+Answer : 5920640
+Part 2 took 0.00381 seconds
+```
