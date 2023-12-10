@@ -13,10 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       
-      # BEGIN: Add your build and test steps here
-      
-      # END: Add your build and test steps here
-      
       - name: Update Readme
         run: |
           python3 update_readme.py
@@ -25,10 +21,8 @@ jobs:
         env:
           EMAIL: ${{ secrets.EMAIL }}
         run: |
-        - name: Commit and push readme
-          run: |
-            git config --local user.name "Automated Readme Update"
-            git config --local user.email "$EMAIL"
-            git add README.md
-            git commit -m "Update README.md"
-            git push origin HEAD
+          git config --local user.name "Automated Readme Update"
+          git config --local user.email "$EMAIL"
+          git add README.md
+          git commit -m "Update README.md"
+          git push origin HEAD
