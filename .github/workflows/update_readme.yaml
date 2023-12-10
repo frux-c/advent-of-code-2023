@@ -15,7 +15,7 @@ jobs:
       
       - name: Update Readme
         run: |
-          python3 update_readme.py
+          python3 .github/workflows/update_readme.py
       
       - name: Commit and push if changed
         env:
