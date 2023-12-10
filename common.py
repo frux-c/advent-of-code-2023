@@ -31,7 +31,7 @@ class PartContext:
     
     def __exit__(self, exc_type, exc_value, exc_traceback):
         self.end_time = time.time()
-        print(f'Answer : {self.answer}')
+        print(f'Answer: {self.answer}')
         print(f'Part {self.part_name} took {self.end_time - self.start_time:.5f} seconds')
         if exc_type:
             print(f'Part {self.part_name} failed with error: {exc_value}')

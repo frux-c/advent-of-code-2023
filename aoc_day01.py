@@ -19,7 +19,7 @@ MIXED_NUM_MAPPING = {
     **NUM_MAPPING, **WORD_NUM_MAPPING
 }
 def part_1():
-    with PartContext('1', 'day1.txt') as part1:
+    with PartContext('1', 'day01.txt') as part1:
         # part 1
         part1.answer = 0
         lines = part1.data.split('\n')
@@ -38,7 +38,7 @@ def part_1():
             part1.answer += (num_lft * 10) + num_rgt
 
 def part_2():
-    with PartContext('2', 'day1.txt') as part2:
+    with PartContext('2', 'day01.txt') as part2:
         part2.answer = 0
         lines = part2.data.split('\n')
         for line in lines:

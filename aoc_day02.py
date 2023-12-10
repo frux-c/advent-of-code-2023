@@ -8,7 +8,7 @@ def part1():
         'green': 13,
         'blue': 14,
     }
-    with PartContext('1', 'day2.txt') as part1:
+    with PartContext('1', 'day02.txt') as part1:
         part1.answer = 0 # sum of game ids
         lines = part1.data.split('\n')
         for i, line in enumerate(lines, 1):
@@ -36,7 +36,7 @@ def part2():
         'blue': 0
     }
     reset_min_cubes = min_cubes.copy()
-    with PartContext('2', 'day2.txt') as part2:
+    with PartContext('2', 'day02.txt') as part2:
         part2.answer = 0 # sum of game ids
         lines = part2.data.split('\n')
         for i, line in enumerate(lines, 1):
