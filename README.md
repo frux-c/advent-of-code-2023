@@ -6,40 +6,37 @@ Credits to [Advent of Code](https://adventofcode.com/) `2023`
 ```bash
 Starting part 1
 Answer: 54968
-Part 1 took 0.00163 seconds
+Part 1 took 0.00212 seconds
 Starting part 2
 Answer: 54094
-Part 2 took 0.01345 seconds
+Part 2 took 0.01657 seconds
 ```
 
 #### Day 02
 ```bash
-Starting part 1
-Answer: 2505
-Part 1 took 0.00081 seconds
-Starting part 2
-Answer: 70265
-Part 2 took 0.00230 seconds
+Traceback (most recent call last):
+  File "/home/runner/work/advent-of-code-2023/advent-of-code-2023/aoc_day02.py", line 2, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+
 ```
 
 #### Day 03
 ```bash
-Starting part 1
-Answer: 532331
-Part 1 took 0.02361 seconds
-Starting part 2
-Answer: 82301120
-Part 2 took 0.01358 seconds
+Traceback (most recent call last):
+  File "/home/runner/work/advent-of-code-2023/advent-of-code-2023/aoc_day03.py", line 2, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+
 ```
 
 #### Day 04
 ```bash
-Starting part 1
-Answer: 23235
-Part 1 took 0.00284 seconds
-Starting part 2
-Answer: 5920640
-Part 2 took 0.00166 seconds
+Traceback (most recent call last):
+  File "/home/runner/work/advent-of-code-2023/advent-of-code-2023/aoc_day04.py", line 2, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+
 ```
 
 #### Day 05
